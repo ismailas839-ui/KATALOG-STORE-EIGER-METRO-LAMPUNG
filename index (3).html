@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Katalog Stok – Eiger Store Metro Lampung</title>
+<meta name="description" content="Katalog stok produk Eiger Store Metro Lampung. Cek ketersediaan & pesan via WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#10201a;--forest:#0f2a20;--forest2:#17392c;--accent:#f26b21;--accent2:#d95a14;--bg:#f4f5f2;--card:#fff;--line:#e4e6e1;--mut:#6b756f;--ok:#15803d;--okbg:#dcfce7;--bad:#b91c1c;--badbg:#fee2e2}
+*{box-sizing:border-box;margin:0}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+button{font:inherit;cursor:pointer}
+header.hero{background:var(--forest) radial-gradient(circle at 85% 0,#1f4d3a 0,transparent 55%);color:#fff;position:relative;overflow:hidden}
+header.hero:after{content:"";position:absolute;right:-40px;bottom:-1px;width:420px;height:150px;opacity:.14;background:#fff;clip-path:polygon(0 100%,22% 38%,34% 58%,56% 6%,76% 52%,86% 36%,100% 100%)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.hero .wrap{padding-top:22px;padding-bottom:34px;position:relative;z-index:1}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:42px;height:42px;background:var(--accent);clip-path:polygon(50% 4%,100% 92%,0 92%);flex:none}
+.brand b{font-size:22px;letter-spacing:.22em;font-weight:800}
+.brand small{display:block;font-size:11px;letter-spacing:.14em;color:#b9cdc2;font-weight:500;margin-top:2px}
+.hero h1{font-size:clamp(24px,4.4vw,38px);line-height:1.15;margin:26px 0 8px;font-weight:800;max-width:640px}
+.hero h1 em{color:var(--accent);font-style:normal}
+.hero p{color:#c6d6cc;max-width:560px;font-size:15px;line-height:1.55}
+.addr{display:inline-flex;gap:8px;align-items:flex-start;margin-top:16px;font-size:13px;color:#d9e6de;text-decoration:none;max-width:560px;line-height:1.45}
+.addr:hover{color:#fff}
+.addr svg{flex:none;margin-top:2px}
+.bar{position:sticky;top:0;z-index:20;background:rgba(244,245,242,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar .wrap{padding-top:12px;padding-bottom:12px;display:grid;gap:10px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.search{flex:1;min-width:200px;position:relative}
+.search input{width:100%;padding:11px 14px 11px 40px;border:1px solid var(--line);border-radius:10px;font:inherit;font-size:14px;background:#fff}
+.search input:focus,select:focus{outline:2px solid var(--accent);border-color:transparent}
+.search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--mut)}
+select{padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;font:inherit;font-size:14px}
+.chk{display:flex;gap:7px;align-items:center;font-size:13px;color:var(--mut);white-space:nowrap}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{border:1px solid var(--line);background:#fff;border-radius:99px;padding:7px 14px;font-size:13px;font-weight:600;white-space:nowrap;color:var(--ink)}
+.chip.on{background:var(--forest);color:#fff;border-color:var(--forest)}
+.count{font-size:13px;color:var(--mut);padding:18px 0 4px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px;padding:10px 0 50px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s}
+.card:hover{box-shadow:0 10px 28px rgba(15,42,32,.12);transform:translateY(-2px)}
+.pic{position:relative;aspect-ratio:1;background:#fff;cursor:pointer;display:grid;place-items:center;padding:14px}
+.pic img{width:100%;height:100%;object-fit:contain}
+.badges{position:absolute;top:10px;left:10px;right:10px;display:flex;justify-content:flex-end;gap:6px;flex-wrap:wrap;z-index:2}
+.b{font-size:12px;font-weight:600;padding:3px 11px;border-radius:99px}
+.b.ok{background:var(--okbg);color:var(--ok)}.b.low{background:#ffedd5;color:#c2410c}.b.out{background:var(--badbg);color:var(--bad)}
+.b.cat{background:#eef0ec;color:#44504a}
+.info{padding:14px 16px 16px;display:flex;flex-direction:column;gap:9px;flex:1}
+.nm{font-weight:600;font-size:15.5px;line-height:1.35;text-transform:uppercase;cursor:pointer}
+.art{font-size:12.5px;color:var(--mut)}
+.lbl{font-size:11.5px;font-weight:600;color:var(--mut);text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px}
+.lbl span{color:var(--ink);text-transform:none;letter-spacing:0}
+.sw{display:flex;gap:8px;flex-wrap:wrap}
+.dot{width:26px;height:26px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px var(--line);padding:0;position:relative}
+.dot.on{box-shadow:0 0 0 2px var(--accent)}
+.dot.x:after{content:"";position:absolute;inset:3px -2px;border-top:2px solid rgba(185,28,28,.8);transform:rotate(-45deg);top:11px;left:0;right:0}
+.sz{display:flex;gap:6px;flex-wrap:wrap}
+.sz button{min-width:38px;padding:5px 9px;border:1px solid var(--line);background:#fff;border-radius:7px;font-size:12.5px;font-weight:600}
+.sz button.on{background:var(--forest);color:#fff;border-color:var(--forest)}
+.sz button:disabled{color:#b3b9b5;background:#f4f5f2;text-decoration:line-through;cursor:not-allowed}
+.stock{font-size:13px;font-weight:600}
+.stock.ok{color:var(--ok)}.stock.low{color:#c2410c}.stock.out{color:var(--bad)}
+.wa{margin-top:auto;display:flex;align-items:center;justify-content:center;gap:8px;background:#16a34a;color:#fff;border:0;border-radius:9px;padding:11px;font-weight:700;font-size:14px;text-decoration:none;transition:background .15s}
+.wa:hover{background:#15803d}
+.wa.ask{background:var(--accent)}.wa.ask:hover{background:var(--accent2)}
+.empty{text-align:center;padding:70px 10px;color:var(--mut)}
+.skel{height:380px;border-radius:12px;background:linear-gradient(90deg,#ecefea 25%,#f6f7f4 50%,#ecefea 75%);background-size:200% 100%;animation:sk 1.2s infinite}
+@keyframes sk{to{background-position:-200% 0}}
+.notice{background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;font-size:13px;padding:10px 14px;border-radius:10px;margin-top:14px}
+footer{background:var(--forest);color:#c6d6cc;font-size:13px;line-height:1.6}
+footer .wrap{padding-top:28px;padding-bottom:28px;display:flex;gap:30px;flex-wrap:wrap;justify-content:space-between}
+footer b{color:#fff;display:block;margin-bottom:4px}
+footer a{color:var(--accent);text-decoration:none;font-weight:600}
+.fab{position:fixed;right:16px;bottom:16px;z-index:30;background:#16a34a;color:#fff;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.modal{position:fixed;inset:0;background:rgba(10,20,15,.6);z-index:50;display:none;align-items:center;justify-content:center;padding:14px}
+.modal.on{display:flex}
+.sheet{background:#fff;border-radius:16px;max-width:880px;width:100%;max-height:92vh;overflow:auto;display:grid;grid-template-columns:1fr 1fr;position:relative}
+.sheet .x{position:absolute;right:12px;top:12px;width:34px;height:34px;border-radius:50%;border:0;background:#eef0ec;font-size:18px;z-index:3}
+.gal{padding:18px;background:#fafaf8}
+.gal .main{aspect-ratio:1;background:#fff;border-radius:10px;display:grid;place-items:center;padding:8px}
+.gal .main img{width:100%;height:100%;object-fit:contain}
+.th{display:flex;gap:8px;margin-top:10px;overflow-x:auto}
+.th img{width:56px;height:56px;object-fit:contain;background:#fff;border:2px solid transparent;border-radius:8px;cursor:pointer;flex:none}
+.th img.on{border-color:var(--accent)}
+.det{padding:26px 22px;display:flex;flex-direction:column;gap:14px}
+.det h2{font-size:20px;text-transform:uppercase;line-height:1.3;padding-right:34px}
+.det .desc{font-size:13px;color:var(--mut)}
+@media(max-width:700px){.sheet{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr);gap:10px}.info{padding:10px}.nm{font-size:13.5px}.hero .wrap{padding-bottom:26px}}
+</style>
+</head>
+<body>
+
+<header class="hero"><div class="wrap">
+  <div class="brand"><div class="logo"></div><div><b>EIGER</b><small>STORE METRO LAMPUNG</small></div></div>
+  <h1>Katalog stok <em>real-time</em> untuk petualangan Anda</h1>
+  <p>Cek ketersediaan produk Eiger di store kami. Pilih warna &amp; ukuran, lalu tanya stok langsung via WhatsApp.</p>
+  <a class="addr" id="addrTop" target="_blank" rel="noopener">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+    <span id="addrTxt"></span>
+  </a>
+</div></header>
+
+<div class="bar"><div class="wrap">
+  <div class="row">
+    <div class="search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Cari nama produk, artikel, atau kategori…">
+    </div>
+    <select id="sort"><option value="name">Nama A–Z</option><option value="stock">Stok terbanyak</option></select>
+  </div>
+  <div class="chips" id="chips"></div>
+</div></div>
+
+<main class="wrap">
+  <div id="notice"></div>
+  <div class="count" id="count">Memuat katalog…</div>
+  <div class="grid" id="grid"><div class="skel"></div><div class="skel"></div><div class="skel"></div><div class="skel"></div></div>
+</main>
+
+<footer><div class="wrap">
+  <div><b>Eiger Store Metro Lampung</b><span id="addrFoot"></span><br><a id="mapLink" target="_blank" rel="noopener">Buka di Google Maps →</a></div>
+  <div><b>WhatsApp Business</b>081121800642<br><a id="waFoot" target="_blank" rel="noopener">Chat sekarang →</a></div>
+  <div><b>Catatan</b>Stok dapat berubah sewaktu-waktu.<br>Konfirmasi ketersediaan via WhatsApp.</div>
+</div></footer>
+
+<a class="fab" id="fab" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.6 4.1 1.6 5.9L0 24l6.4-1.7a11.9 11.9 0 0 0 5.6 1.4c6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.4-8.3zM12 21.7c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.800 1 1-3.700-.2-.4a9.800 9.800 0 0 1-1.500-5.200c0-5.400 4.400-9.800 9.900-9.800 2.600 0 5.100 1 6.900 2.900a9.700 9.700 0 0 1 2.900 6.900c0 5.400-4.400 9.900-9.800 9.900zm5.400-7.400c-.3-.1-1.700-.9-2-1s-.5-.1-.7.100-.8 1-.9 1.100-.3.200-.6.100a8 8 0 0 1-2.400-1.500 9 9 0 0 1-1.600-2c-.2-.3 0-.4.100-.6l.4-.5.300-.5v-.5c0-.1-.7-1.600-.9-2.200-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.500 1.100 2.900 1.200 3.100c.1.200 2.100 3.200 5.100 4.500 2 .8 2.700.9 3.700.7.600-.1 1.700-.7 2-1.400s.2-1.300.2-1.400-.3-.2-.6-.3z"/></svg>
+</a>
+
+<div class="modal" id="modal"><div class="sheet" id="sheet"></div></div>
+
+<script>
+/* ================= KONFIGURASI ================= */
+const CONFIG = {
+  SHEET_ID: "1cR0q7Pd-cy5Nv_TAQwpgzYEFvzxbSZiGeOYFMqRyk7I",
+  GID: "0",                         // ganti jika data ada di tab lain (lihat angka gid= di URL sheet)
+  WA: "6281121800642",              // 081121800642 dalam format internasional
+  ADDRESS: "Jl. Jenderal A. Yani No.1, RT.005/RW.003, Iringmulyo, Kec. Metro Tim., Kota Metro, Lampung 34124",
+  LOW_STOCK: 3,                     // stok <= angka ini ditandai "Stok terbatas"
+  REFRESH_MS: 5 * 60 * 1000         // auto refresh data tiap 5 menit
+};
+const COLORS = {BLK:["Hitam","#1a1a1a"],NAV:["Navy","#1f2f5a"],RED:["Merah","#c62828"],GRY:["Abu-abu","#8a8f94"],OLI:["Olive","#6b6b2f"],BLU:["Biru","#1e66c8"],GRE:["Hijau","#2e7d32"],BRW:["Cokelat","#6d4a2b"],DBR:["Cokelat Tua","#3e2a1a"],TAN:["Tan","#c9a77a"],NOC:["Standar","#d6d6d0"],ORA:["Oranye","#f26b21"],KHK:["Khaki","#b7a46a"],TER:["Terakota","#b5593c"],DGR:["Abu Tua","#4a4f54"],DGN:["Hijau Tua","#1f4d36"],WHT:["Putih","#f5f5f5"],YEL:["Kuning","#f2c230"],MRN:["Marun","#6d1f2c"],PUR:["Ungu","#6a3d9a"],PNK:["Pink","#e58aa6"],CRM:["Krem","#eadfc8"],SIL:["Silver","#c4c7c9"],GLD:["Emas","#c9a227"]};
+const SIZE_ORDER = ["XXS","XS","S","M","L","XL","2XL","3XL","4XL","5XL","ALL","NOS"];
+const waLink = t => `https://wa.me/${CONFIG.WA}?text=${encodeURIComponent(t)}`;
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const $ = id => document.getElementById(id);
+
+/* Data contoh (fallback jika sheet gagal dimuat, misal sedang offline) */
+const DEMO = `SKU Name,SKU Code,Generic,MC Level One,MC Level Two,MC Level Three,MC Level Four,Location,Total Qty,Available Qty,In Process Qty,Allocated Qty,Color,Desc,Gambar1,Gambar2
+"K. REACTION, RED, L",910002902001,910002902,EIGER,MOUNTAINEERING,APPAREL,TOP,Metro,1,1,0,0,910002902.RED,"K. REACTION, RED, L",https://id-live.slatic.net/p/179835ba5b3e479ec2b742fabda7fdc5.jpg,https://id-live.slatic.net/p/787616961c105d835ea234a4664c822d.jpg
+"K. REACTION, RED, XL",910002902004,910002902,EIGER,MOUNTAINEERING,APPAREL,TOP,Metro,5,5,0,0,910002902.RED,"K. REACTION, RED, XL",https://id-live.slatic.net/p/179835ba5b3e479ec2b742fabda7fdc5.jpg,https://id-live.slatic.net/p/787616961c105d835ea234a4664c822d.jpg
+"K. REACTION, BLK, S",910002902061,910002902,EIGER,MOUNTAINEERING,APPAREL,TOP,Metro,0,0,0,0,910002902.BLK,"K. REACTION, BLK, S",https://id-live.slatic.net/p/add697d6f296d4cee6fe3aa678d6b42d.jpg,
+"TIBETAN SOCKS, GRY, M",910004595006,910004595,EIGER,MOUNTAINEERING,FOOTWEAR,SOCK,Metro,2,2,0,0,910004595.GRY,"TIBETAN SOCKS, GRY, M",https://id-live.slatic.net/p/a3dbd964e0ee494de4bd388c1f6b92ea.jpg,
+"TIBETAN SOCKS, GRY, L",910004595004,910004595,EIGER,MOUNTAINEERING,FOOTWEAR,SOCK,Metro,2,2,0,0,910004595.GRY,"TIBETAN SOCKS, GRY, L",https://id-live.slatic.net/p/a3dbd964e0ee494de4bd388c1f6b92ea.jpg,
+"IRIDIUM 2L FOLDABLE WB, BLK, NOS",910004992001,910004992,EIGER,RIDING,BAGS,WAIST BAG,Metro,9,9,0,0,910004992.BLK,"IRIDIUM 2L FOLDABLE WB, BLK, NOS",https://id-live.slatic.net/p/cded51586daaeb4eb2b9be1d76004ff8.jpg,
+"G.PANONE RIDE, BLK, M",910002217005,910002217,EIGER,RIDING,EQUIPMENT,GLOVES,Metro,2,2,0,0,910002217.BLK,"G.PANONE RIDE, BLK, M",https://id-live.slatic.net/p/029690a1d26afb83df63c55353e45383.jpg,`;
+
+/* ================= DATA ================= */
+let PRODUCTS = [], state = {cat: "SEMUA", sel: {}};
+
+function parseCSV(t){const r=[];let row=[],f="",q=false;for(let i=0;i<t.length;i++){const c=t[i];
+  if(q){if(c==='"'){if(t[i+1]==='"'){f+='"';i++}else q=false}else f+=c}
+  else if(c==='"')q=true;else if(c===","){row.push(f);f=""}else if(c==="\n"){row.push(f);r.push(row);row=[];f=""}else if(c!=="\r")f+=c}
+  if(f||row.length){row.push(f);r.push(row)}return r}
+
+function sizeRank(s){const i=SIZE_ORDER.indexOf(s);if(i>-1)return i;const n=parseFloat(s);return isNaN(n)?99:100+n}
+
+function buildProducts(csv){
+  const rows = typeof csv === "string" ? parseCSV(csv) : csv; const H = rows[0].map(h => h.trim().toLowerCase());
+  const ix = n => H.indexOf(n), g = (r,n) => (r[ix(n)] || "").trim();
+  const imgCols = H.map((h,i)=>h.startsWith("gambar")?i:-1).filter(i=>i>-1);
+  const stIdx = H.findIndex(h => h === "status" || h === "status produk");
+  const map = new Map();
+  rows.slice(1).forEach(r => {
+    const code = g(r,"sku code"), full = g(r,"sku name");
+    const imgs = imgCols.map(i => (r[i]||"").trim()).filter(u => /^https?:/.test(u));
+    if(!code.startsWith("9") || !full || !imgs.length) return;           // lewati packaging/perlengkapan non-produk
+    if((parseInt(g(r,"available qty")) || 0) <= 0) return;               // Available Qty 0 = Tidak Aktif (disembunyikan)
+    const status = stIdx > -1 ? (r[stIdx]||"").trim().toLowerCase() : "";
+    if(["tidak aktif","nonaktif","non aktif","inactive","off","no","0","false"].includes(status)) return;
+    const parts = full.split(",").map(s => s.trim());
+    const size = parts.length > 2 ? parts.pop() : "NOS";
+    const colCode = (g(r,"color").split(".")[1] || (parts.length > 1 ? parts.pop() : "NOC")).toUpperCase();
+    if(parts.length > 1 && parts[parts.length-1].toUpperCase() === colCode) parts.pop();
+    const name = parts.join(", ");
+    const art = g(r,"generic") && g(r,"generic") !== "-" ? g(r,"generic") : code.slice(0,9);
+    if(!map.has(art)) map.set(art, {art, name, cat: g(r,"mc level three") || "LAINNYA", sub: g(r,"mc level four"), line: g(r,"mc level two"), desc: "", colors: {}});
+    const p = map.get(art);
+    const c = p.colors[colCode] = p.colors[colCode] || {code: colCode, imgs, sizes: {}};
+    c.sizes[size] = (c.sizes[size] || 0) + (parseInt(g(r,"available qty")) || 0);
+    if(g(r,"desc")) p.desc = g(r,"desc");
+  });
+  return [...map.values()].map(p => {
+    p.colorList = Object.values(p.colors).map(c => {
+      c.sizeList = Object.entries(c.sizes).sort((a,b)=>sizeRank(a[0])-sizeRank(b[0])).map(([s,q])=>({s,q}));
+      c.total = c.sizeList.reduce((a,b)=>a+b.q,0); return c;
+    }).sort((a,b)=>b.total-a.total);
+    p.total = p.colorList.reduce((a,b)=>a+b.total,0); return p;
+  });
+}
+
+const BASE = `https://docs.google.com/spreadsheets/d/${CONFIG.SHEET_ID}/gviz/tq`;
+
+/* Cadangan: muat via <script> (JSONP) — tidak terkena aturan CORS */
+function loadJSONP(){
+  return new Promise((resolve, reject) => {
+    const cb = "gs_" + Date.now(), s = document.createElement("script");
+    const timer = setTimeout(() => {cleanup(); reject(new Error("timeout"))}, 15000);
+    function cleanup(){clearTimeout(timer); delete window[cb]; s.remove()}
+    window[cb] = res => {
+      cleanup();
+      if(!res || res.status !== "ok" || !res.table) return reject(new Error("respon sheet tidak valid"));
+      const cell = c => c == null || c.v == null ? "" : String(c.f && typeof c.v === "number" && /^\d{10,}$/.test(String(c.v)) ? c.v : c.v);
+      let head = res.table.cols.map(c => c.label || "");
+      let body = res.table.rows.map(r => r.c.map(cell));
+      if(head.every(h => !h) || !head.some(h => /sku/i.test(h))) { head = body.shift() || []; }   // header ada di baris pertama
+      resolve([head, ...body]);
+    };
+    s.onerror = () => {cleanup(); reject(new Error("script gagal dimuat"))};
+    s.src = `${BASE}?tqx=responseHandler:${cb}&gid=${CONFIG.GID}&_=${Date.now()}`;
+    document.head.appendChild(s);
+  });
+}
+
+async function load(){
+  let data = null, err = "";
+  try{
+    const res = await fetch(`${BASE}?tqx=out:csv&gid=${CONFIG.GID}&_=${Date.now()}`);
+    if(!res.ok) throw new Error("HTTP " + res.status);
+    const txt = await res.text(); if(txt.trim().startsWith("<")) throw new Error("sheet belum publik / bukan CSV");
+    data = txt;
+  }catch(e1){
+    try{ data = await loadJSONP(); }catch(e2){ err = e2.message; console.warn("Gagal memuat Google Sheet:", e1, e2); }
+  }
+  if(data){
+    PRODUCTS = buildProducts(data); $("notice").innerHTML = "";
+    if(!PRODUCTS.length) $("notice").innerHTML = '<div class="notice">Sheet terbaca, tetapi tidak ada produk dengan stok &gt; 0 dan foto. Cek kolom <b>Available Qty</b> dan <b>Gambar1</b>, atau nilai <code>GID</code> (tab sheet).</div>';
+  } else {
+    PRODUCTS = buildProducts(DEMO);
+    $("notice").innerHTML = `<div class="notice">Data live belum bisa dimuat (${esc(err)}) — menampilkan data contoh. Pastikan sheet dibagikan "Anyone with the link → Viewer", dan buka halaman ini dari hosting/browser langsung, bukan dari pratinjau.</div>`;
+  }
+  render();
+}
+
+/* ================= RENDER ================= */
+function sel(p){
+  let s = state.sel[p.art];
+  const valid = s && p.colors[s.color];
+  if(!valid){const c = p.colorList.find(c=>c.total>0) || p.colorList[0]; s = state.sel[p.art] = {color:c.code, size:null};}
+  const c = p.colors[s.color];
+  if(!c.sizeList.some(z=>z.s===s.size)) s.size = (c.sizeList.find(z=>z.q>0) || c.sizeList[0]).s;
+  return s;
+}
+const stockInfo = q => q<=0 ? ["out","Stok habis"] : q<=CONFIG.LOW_STOCK ? ["low",`Stok terbatas: ${q}`] : ["ok",`Stok tersedia: ${q}`];
+const cname = c => (COLORS[c]||[c])[0];
+const msg = (p,c,s,q) => `Selamat Datang di Eiger Metro Lampung. Halo, saya tertarik dengan produk ${p.name} - ${p.art} - ${cname(c)} - ${s}. Apakah stoknya masih tersedia?`;
+
+function card(p){
+  const s = sel(p), c = p.colors[s.color], z = c.sizeList.find(x=>x.s===s.size), [k,t] = stockInfo(z.q);
+  const showSz = !(c.sizeList.length===1 && c.sizeList[0].s==="NOS");
+  const [bk,bt] = p.total<=0?["out","Habis"]:p.total<=CONFIG.LOW_STOCK?["low","Stok terbatas"]:["ok",`${p.total} pcs`];
+  return `<article class="card" data-a="${p.art}">
+    <div class="pic" data-open="${p.art}"><div class="badges"><span class="b cat">${esc(p.sub||p.cat)}</span><span class="b ${bk}">${bt}</span></div>
+      <img src="${esc(c.imgs[0])}" alt="${esc(p.name)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.opacity=.25"></div>
+    <div class="info">
+      <div><div class="nm" data-open="${p.art}">${esc(p.name)}</div><div class="art">Artikel ${esc(p.art)}</div></div>
+      <div><div class="lbl">Warna: <span>${esc(cname(c.code))}</span></div><div class="sw">${p.colorList.map(x=>
+        `<button class="dot ${x.code===s.color?"on":""} ${x.total<=0?"x":""}" style="background:${(COLORS[x.code]||[0,"#ccc"])[1]}" title="${esc(cname(x.code))}" data-c="${x.code}" data-a="${p.art}"></button>`).join("")}</div></div>
+      ${showSz?`<div><div class="lbl">Ukuran: <span>${esc(s.size)}</span></div><div class="sz">${c.sizeList.map(x=>
+        `<button class="${x.s===s.size?"on":""}" ${x.q<=0?"disabled":""} data-s="${esc(x.s)}" data-a="${p.art}">${esc(x.s)}</button>`).join("")}</div></div>`:""}
+      <div class="stock ${k}">${t}</div>
+      <a class="wa ${z.q<=0?"ask":""}" target="_blank" rel="noopener" href="${waLink(msg(p,c.code,s.size))}">${waIcon()} ${z.q<=0?"Tanya Stok":"Pesan via WhatsApp"}</a>
+    </div></article>`;
+}
+const waIcon = () => '<svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.700-.8-2-.9s-.5-.1-.7.1-.8.9-.9 1.100-.3.200-.6.100a8 8 0 0 1-2.400-1.500 9 9 0 0 1-1.600-2c-.2-.3 0-.4.100-.6l.4-.5.200-.4v-.4c0-.1-.7-1.600-.9-2.200s-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.400 1 2.800 1.200 3c.1.200 2.100 3.200 5.100 4.500 2 .8 2.700.9 3.700.7.600-.1 1.700-.7 2-1.400s.2-1.300.2-1.400-.3-.2-.6-.3z"/></svg>';
+
+function render(){
+  const q = $("q").value.trim().toLowerCase(), out = false;
+  const cats = ["SEMUA", ...new Set(PRODUCTS.map(p=>p.cat))].sort((a,b)=>a==="SEMUA"?-1:b==="SEMUA"?1:a.localeCompare(b));
+  $("chips").innerHTML = cats.map(c=>`<button class="chip ${c===state.cat?"on":""}" data-cat="${esc(c)}">${esc(c==="SEMUA"?"Semua":c.charAt(0)+c.slice(1).toLowerCase())}</button>`).join("");
+  let list = PRODUCTS.filter(p => (out || p.total>0) && (state.cat==="SEMUA" || p.cat===state.cat) &&
+    (!q || [p.name,p.art,p.cat,p.sub,p.line,...p.colorList.map(c=>cname(c.code))].join(" ").toLowerCase().includes(q)));
+  list.sort($("sort").value==="stock" ? (a,b)=>b.total-a.total : (a,b)=>a.name.localeCompare(b.name));
+  $("count").textContent = `${list.length} produk ditemukan`;
+  $("grid").innerHTML = list.length ? list.map(card).join("") : '<div class="empty" style="grid-column:1/-1"><b>Produk tidak ditemukan</b><br>Coba kata kunci atau kategori lain.</div>';
+}
+
+/* ================= MODAL ================= */
+function openModal(art, img=0){
+  const p = PRODUCTS.find(x=>x.art===art), s = sel(p), c = p.colors[s.color], z = c.sizeList.find(x=>x.s===s.size), [k,t] = stockInfo(z.q);
+  $("sheet").innerHTML = `<button class="x" data-close>×</button>
+    <div class="gal"><div class="main"><img id="mainImg" src="${esc(c.imgs[img]||c.imgs[0])}" referrerpolicy="no-referrer" alt=""></div>
+      <div class="th">${c.imgs.map((u,i)=>`<img src="${esc(u)}" data-i="${i}" class="${i===img?"on":""}" referrerpolicy="no-referrer" alt="">`).join("")}</div></div>
+    <div class="det"><div><h2>${esc(p.name)}</h2><div class="art">Artikel ${esc(p.art)} · ${esc(p.line)} · ${esc(p.sub||p.cat)}</div></div>
+      <div><div class="lbl">Warna: <span>${esc(cname(c.code))}</span></div><div class="sw">${p.colorList.map(x=>
+        `<button class="dot ${x.code===s.color?"on":""} ${x.total<=0?"x":""}" style="background:${(COLORS[x.code]||[0,"#ccc"])[1]}" title="${esc(cname(x.code))}" data-mc="${x.code}"></button>`).join("")}</div></div>
+      <div><div class="lbl">Ukuran &amp; stok</div><div class="sz">${c.sizeList.map(x=>
+        `<button class="${x.s===s.size?"on":""}" ${x.q<=0?"disabled":""} data-ms="${esc(x.s)}">${esc(x.s)} · ${x.q}</button>`).join("")}</div></div>
+      <div class="stock ${k}">${t}</div>
+      ${p.desc?`<div class="desc">${esc(p.desc)}</div>`:""}
+      <a class="wa ${z.q<=0?"ask":""}" target="_blank" rel="noopener" href="${waLink(msg(p,c.code,s.size))}">${waIcon()} ${z.q<=0?"Tanya Stok":"Pesan via WhatsApp"}</a></div>`;
+  $("modal").classList.add("on"); $("modal").dataset.a = art;
+}
+
+/* ================= EVENTS ================= */
+document.addEventListener("click", e => {
+  const t = e.target.closest("[data-cat],[data-c],[data-s],[data-open],[data-mc],[data-ms],[data-i],[data-close]"); if(!t){ if(e.target.id==="modal") $("modal").classList.remove("on"); return; }
+  const d = t.dataset, art = d.a || $("modal").dataset.a;
+  if(d.cat){state.cat=d.cat;render()}
+  else if(d.c){state.sel[art]={color:d.c,size:null};render()}
+  else if(d.s){state.sel[art].size=d.s;render()}
+  else if(d.open) openModal(d.open);
+  else if(d.mc){state.sel[art]={color:d.mc,size:null};openModal(art);render()}
+  else if(d.ms){state.sel[art].size=d.ms;openModal(art);render()}
+  else if(d.i!==undefined){const p=PRODUCTS.find(x=>x.art===art);$("mainImg").src=p.colors[state.sel[art].color].imgs[+d.i];document.querySelectorAll(".th img").forEach((im,i)=>im.classList.toggle("on",i==d.i))}
+  else if("close" in d) $("modal").classList.remove("on");
+});
+document.addEventListener("keydown", e => e.key==="Escape" && $("modal").classList.remove("on"));
+let tm; $("q").addEventListener("input", () => {clearTimeout(tm);tm=setTimeout(render,180)});
+$("sort").onchange = render;
+
+/* init */
+const map = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("Eiger Store Metro Lampung " + CONFIG.ADDRESS);
+$("addrTxt").textContent = $("addrFoot").textContent = CONFIG.ADDRESS;
+$("addrTop").href = $("mapLink").href = map;
+$("fab").href = $("waFoot").href = waLink("Selamat Datang di Eiger Metro Lampung. Halo, saya ingin bertanya tentang produk Eiger.");
+load(); setInterval(load, CONFIG.REFRESH_MS);
+</script>
+</body>
+</html>
